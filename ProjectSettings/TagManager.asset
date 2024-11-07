@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3459382149
+    locked: 0
+  - name: Traps
+    uniqueID: 980762851
+    locked: 0
+  - name: Fruits
+    uniqueID: 3967156327
+    locked: 0
+  - name: Player
+    uniqueID: 499893025
+    locked: 0
+  - name: Floor
+    uniqueID: 2586610625
+    locked: 0
+  - name: Wall
+    uniqueID: 1771610231
+    locked: 0
