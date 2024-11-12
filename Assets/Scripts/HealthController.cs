@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
+    public delegate void Recibirdañodelegado(float health);
     [SerializeField] float vida;
-    [SerializeField] float vidamax;
+    public float vidamax;
 
-    public void recibirdaño(float daño)
+    public Recibirdañodelegado Dañorecibido;
+    public Recibirdañodelegado Curarecibida;
+
+    void Start()
+    {
+        vidamax = vida;
+    }
+    public void Recibirdaño(float daño)
     {
         vida -= daño;
+
+        Dañorecibido?.Invoke(vida);
 
         if (vida <= 0)
         {
@@ -24,5 +34,7 @@ public class HealthController : MonoBehaviour
         {
             vida = vidamax;
         }
+
+        Curarecibida?.Invoke(vidamax);
     }
 }

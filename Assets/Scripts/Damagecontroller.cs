@@ -11,7 +11,7 @@ public class Damagecontroller : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<HealthController>())
         {
-            collision.gameObject.GetComponent<HealthController>().recibirdaño(daño);
+            collision.gameObject.GetComponent<HealthController>().Recibirdaño(daño);
         }
     }
 }
