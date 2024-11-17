@@ -10,7 +10,7 @@ public class StateFall : BaseEstado
 
     public override void EntradaEstado()
     {
-        controlador.anim.Play("fall");
+        controlador.anim.CrossFade("fall", 0.1f);
     }
 
     public override void UpdateEstado()

@@ -11,8 +11,8 @@ public class StateJump : BaseEstado
 
     public override void EntradaEstado()
     {
-        controlador.anim.Play("jump");
-        controlador.rigid.AddForce(Vector2.up * controlador.fuerzaSalto, ForceMode2D.Impulse);
+        controlador.anim.CrossFade("jump", 0.1f);
+        controlador.rigid.AddForce(Vector2.up * controlador.fuerzaSalto);
     }
 
     public override void UpdateEstado()

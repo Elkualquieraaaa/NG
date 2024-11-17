@@ -11,7 +11,7 @@ public class StateRun : BaseEstado
 
     public override void EntradaEstado()
     {
-        controlador.anim.Play("run");
+        controlador.anim.CrossFade("run", 0.1f);
     }
 
     public override void UpdateEstado()

@@ -12,7 +12,7 @@ public class StateIdle : BaseEstado
 
     public override void EntradaEstado()
     {
-        controlador.anim.Play ("idle");
+        controlador.anim.CrossFade ("idle", 0.1f);
         controlador.rigid.velocity = new Vector2(0, controlador.rigid.velocity.y);
     }
 
