@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateIdle : BaseEstado
 {
-   
+
 
     public StateIdle(CharacterMovement controller) : base(controller)
     {
@@ -12,13 +12,14 @@ public class StateIdle : BaseEstado
 
     public override void EntradaEstado()
     {
-        controlador.anim.CrossFade("idle", 0.1f);
+        controlador.anim.Play ("idle");
         controlador.rigid.velocity = new Vector2(0, controlador.rigid.velocity.y);
     }
 
     public override void UpdateEstado()
     {
-        if (controlador.rigid.velocity.y <= 0)
+       
+        if (controlador.rigid.velocity.y <=0)
         {
             if (controlador.tocandoPiso)
             {

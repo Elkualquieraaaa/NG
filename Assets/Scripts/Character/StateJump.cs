@@ -17,6 +17,7 @@ public class StateJump : BaseEstado
 
     public override void UpdateEstado()
     {
+
         if (controlador.rigid.velocity.y <= 0)
         {
             if (controlador.tocandoPiso)

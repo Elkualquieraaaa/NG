@@ -10,7 +10,7 @@ public class StateFall : BaseEstado
 
     public override void EntradaEstado()
     {
-        controlador.anim.CrossFade("fall", 0.1f);
+        controlador.anim.Play("fall");
     }
 
     public override void UpdateEstado()
@@ -29,6 +29,7 @@ public class StateFall : BaseEstado
                 }
             }
         }
+
     }
 
     public override void FixedUpdateEstado()
