@@ -3794,7 +3794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: fuerzaSalto
-      value: 30
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: centroDeteccion
@@ -3810,7 +3810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: capasDeteccion.m_Bits
-      value: 8
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 6265781845573078811, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: m_LocalPosition.y
