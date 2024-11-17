@@ -3594,7 +3594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: capasDeteccion.m_Bits
-      value: 63
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6265781845573078811, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3640,6 +3640,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7464041811634218831, guid: a4b3976b16e721843bb604905c145a83, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 7bd11019a7ae1334a801c109455ee35e, type: 2}
     - target: {fileID: 8343102458513002120, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: m_SortingLayer
       value: 4
