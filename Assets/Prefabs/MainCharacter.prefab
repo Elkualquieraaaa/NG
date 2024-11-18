@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6265781845573078811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5763325454326460025}
   - component: {fileID: 6130922482880076017}
   - component: {fileID: 7170736547971402317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -195,14 +195,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c051ffb8c522f2548b6b07b30f6d56e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitym: 10
-  forcej: 1300
-  detector: {fileID: 6265781845573078811}
-  radius: 0.55
-  Isgrounded: 0
-  mask:
+  anim: {fileID: 0}
+  rigid: {fileID: 0}
+  fuerzaSalto: 0
+  horizontal: 0
+  centroDeteccion: {fileID: 6265781845573078811}
+  capasDeteccion:
     serializedVersion: 2
     m_Bits: 8
+  "tama\xF1oDeteccion": {x: 0, y: 0}
+  tocandoPiso: 0
+  teclaSalto: 32
+  velocidad: 0
 --- !u!95 &6130922482880076017
 Animator:
   serializedVersion: 5

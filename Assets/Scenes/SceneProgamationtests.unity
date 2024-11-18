@@ -345,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 681140503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.93, y: -0.14, z: -0.0012097528}
+  m_LocalPosition: {x: 1.3, y: -0.14, z: -0.0012097528}
   m_LocalScale: {x: 1.1942152, y: 1.1942152, z: 1.1942152}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -560,6 +560,9 @@ MonoBehaviour:
   velocidad: 0
   visionfield: {fileID: 681140504}
   visionsize: {x: 6.91, y: 2}
+  detectionlayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1671774158 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2994859935171834524, guid: 8dc68bf7aab205f49a0dd9aa1167274f, type: 3}
@@ -671,18 +674,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
-      propertyPath: teclaSalto
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
-      propertyPath: centroDeteccion
-      value: 
-      objectReference: {fileID: 1880105524}
-    - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
-      propertyPath: capasDeteccion.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6788430172657079200, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.94
@@ -732,11 +723,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4b3976b16e721843bb604905c145a83, type: 3}
---- !u!4 &1880105524 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6265781845573078811, guid: a4b3976b16e721843bb604905c145a83, type: 3}
-  m_PrefabInstance: {fileID: 1880105523}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &378116317334082642
 PrefabInstance:
   m_ObjectHideFlags: 0
