@@ -13,6 +13,8 @@ public class Chameleonmovement : MonoBehaviour
     public Transform visionfield;
     public Vector2 visionsize;
     public LayerMask detectionlayer;
+
+    [SerializeField] List<Damagecontroller> Damages;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +37,21 @@ public class Chameleonmovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(visionfield.position, visionsize);
+    }
+
+    public void ActivateDamages()
+    {
+        foreach(var damagecontroller in Damages)
+        {
+            damagecontroller.Activatecollider();
+        }
+    }
+
+    public void DesactivateDamages()
+    {
+        foreach (var damagecontroller in Damages)
+        {
+            damagecontroller.Desactivatecollider();
+        }
     }
 }
