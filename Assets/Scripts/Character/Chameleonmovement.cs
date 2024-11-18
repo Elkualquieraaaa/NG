@@ -9,6 +9,7 @@ public class Chameleonmovement : MonoBehaviour
     public float velocidad;
     public Transform visionfield;
     public Vector2 visionsize;
+    public LayerMask detectionlayer;
     // Start is called before the first frame update
     void Start()
     {

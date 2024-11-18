@@ -320,6 +320,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &681140503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 681140504}
+  m_Layer: 0
+  m_Name: visionfield
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &681140504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681140503}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.93, y: -0.14, z: -0.0012097528}
+  m_LocalScale: {x: 1.1942152, y: 1.1942152, z: 1.1942152}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1529840236}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1201155272 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
@@ -355,6 +386,7 @@ GameObject:
   - component: {fileID: 1529840234}
   - component: {fileID: 1529840238}
   - component: {fileID: 1529840237}
+  - component: {fileID: 1529840239}
   m_Layer: 0
   m_Name: Chamaleon
   m_TagString: Untagged
@@ -444,10 +476,11 @@ Transform:
   m_GameObject: {fileID: 1529840233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.29, y: -2.11, z: 0.22502786}
+  m_LocalPosition: {x: 4.31, y: -2.11, z: 0.22502786}
   m_LocalScale: {x: 0.83737, y: 0.83737, z: 0.83737}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 681140504}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1529840237
@@ -512,6 +545,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1529840239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529840233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869fd66e96cfd1047964d729c520a439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 0
+  visionfield: {fileID: 681140504}
+  visionsize: {x: 6.91, y: 2}
 --- !u!114 &1671774158 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2994859935171834524, guid: 8dc68bf7aab205f49a0dd9aa1167274f, type: 3}
