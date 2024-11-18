@@ -19,12 +19,11 @@ public class Chameleonmovement : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        Physics2D.OverlapCapsule(visionfield.position, visionsize, CapsuleDirection2D.Horizontal, 0);
+        Debug.Log(Physics2D.OverlapCapsule(visionfield.position, visionsize, CapsuleDirection2D.Horizontal, 0));
+       
     }
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(visionfield.position, visionsize.y);
         Gizmos.DrawCube(visionfield.position, visionsize);
-        Gizmos.DrawSphere(visionfield.position + (Vector3.one * visionsize.x), visionsize.y);
     }
 }
