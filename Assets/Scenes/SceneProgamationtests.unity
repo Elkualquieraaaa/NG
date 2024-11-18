@@ -230,7 +230,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167606865}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -639,6 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869fd66e96cfd1047964d729c520a439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objetive: {fileID: 0}
   rigid: {fileID: 0}
   anim: {fileID: 0}
   distance: 0

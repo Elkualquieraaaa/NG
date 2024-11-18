@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chameleonmovement : MonoBehaviour
 {
-    Collider2D objetive;
+    public Collider2D objetive;
     public Rigidbody2D rigid;
     public Animator anim;
 
