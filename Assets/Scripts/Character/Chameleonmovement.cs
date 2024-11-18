@@ -5,11 +5,11 @@ using UnityEngine;
 public class Chameleonmovement : MonoBehaviour
 {
     Collider2D objetive;
-    Rigidbody2D rigid;
-    Animator anim;
+    public Rigidbody2D rigid;
+    public Animator anim;
 
     public float distance;
-    public float velocidad;
+    public float velocitym;
     public Transform visionfield;
     public Vector2 visionsize;
     public LayerMask detectionlayer;
@@ -29,6 +29,7 @@ public class Chameleonmovement : MonoBehaviour
         if (objetive != null)
         {
             distance = Vector2.Distance(transform.position, objetive.transform.position);
+            anim.SetFloat("targetdistance", distance);
         }
     }
     private void OnDrawGizmos()

@@ -476,7 +476,7 @@ Transform:
   m_GameObject: {fileID: 1529840233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7, y: -2.34, z: 0.22502786}
+  m_LocalPosition: {x: -4.02, y: -2.34, z: 0.22502786}
   m_LocalScale: {x: 0.83737, y: 0.83737, z: 0.83737}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -560,7 +560,7 @@ MonoBehaviour:
   distance: 0
   velocidad: 0
   visionfield: {fileID: 681140504}
-  visionsize: {x: 6.91, y: 2}
+  visionsize: {x: 12.39, y: 2}
   detectionlayer:
     serializedVersion: 2
     m_Bits: 64
