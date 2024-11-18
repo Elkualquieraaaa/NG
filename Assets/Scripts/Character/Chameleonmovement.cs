@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chameleonmovement : MonoBehaviour
 {
+    Rigidbody2D rigid;
     Animator anim;
     public float velocidad;
     public Transform visionfield;
@@ -11,11 +12,19 @@ public class Chameleonmovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        Physics2D.OverlapCapsule(visionfield.position, visionsize, CapsuleDirection2D.Horizontal, 0);
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(visionfield.position, visionsize.y);
+        Gizmos.DrawCube(visionfield.position, visionsize);
+        Gizmos.DrawSphere(visionfield.position + (Vector3.one * visionsize.x), visionsize.y);
     }
 }
