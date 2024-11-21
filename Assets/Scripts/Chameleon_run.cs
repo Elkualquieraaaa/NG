@@ -14,7 +14,16 @@ public class Chameleon_run : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Chameleonmovement.rigid.velocity = new Vector2(Chameleonmovement.velocitym, Chameleonmovement.rigid.velocity.y);
+        if (Chameleonmovement.transform.position.x > Chameleonmovement.objetive.transform.position.x)
+        {
+            Chameleonmovement.transform.rotation = Quaternion.Euler(0, 0, 0);
+            Chameleonmovement.rigid.velocity = new Vector2(Chameleonmovement.velocitym, Chameleonmovement.rigid.velocity.y);
+        }
+        if (Chameleonmovement.transform.position.x < Chameleonmovement.objetive.transform.position.x)
+        {
+            Chameleonmovement.transform.rotation = Quaternion.Euler(0, 180, 0);
+            Chameleonmovement.rigid.velocity = new Vector2(Chameleonmovement.velocitym*-1, Chameleonmovement.rigid.velocity.y);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
