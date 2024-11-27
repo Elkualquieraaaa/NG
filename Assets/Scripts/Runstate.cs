@@ -17,7 +17,7 @@ public class Runstate : Basestate
     {
         if (character.tocandoelsuelo)
         {
-            if (Input.GetKeyDown(character.keyjump))
+            if (character.jumpbutton)
             {
                 Exitstatus(character.jump);
             }

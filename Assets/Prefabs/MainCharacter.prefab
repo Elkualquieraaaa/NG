@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c051ffb8c522f2548b6b07b30f6d56e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joy: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   animator: {fileID: 0}
   rigid: {fileID: 0}
@@ -206,7 +207,8 @@ MonoBehaviour:
   tocandoelsuelo: 0
   radius: 0.55
   forcej: 40
-  forcem: 10
+  forcem: 8
+  jumpbutton: 0
   keyjump: 32
   horizontal: 0
 --- !u!95 &6130922482880076017

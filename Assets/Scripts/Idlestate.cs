@@ -19,7 +19,7 @@ public class Idlestate : Basestate
     {
         if (character.tocandoelsuelo)
         {
-            if (Input.GetKeyDown(character.keyjump))
+            if (character.jumpbutton)
             {
                 Exitstatus(character.jump);
             }
@@ -36,7 +36,6 @@ public class Idlestate : Basestate
     }
     public override void Fixedupdatestatus()
     {
-
     }
 
     public override void Exitstatus(Basestate newstate)

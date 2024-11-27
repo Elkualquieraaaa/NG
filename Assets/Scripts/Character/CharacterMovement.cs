@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public Joystick joy;
     public SpriteRenderer SpriteRenderer;
     public Animator animator;
     public Rigidbody2D rigid;
@@ -20,6 +21,7 @@ public class CharacterMovement : MonoBehaviour
     public float radius;
     public float forcej;
     public float forcem;
+    public bool jumpbutton;
     public KeyCode keyjump;
 
     public float horizontal;
@@ -40,7 +42,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
+        horizontal = joy.Horizontal;
         actualstate.Updatestatus();
         flip();
     }
@@ -68,5 +70,17 @@ public class CharacterMovement : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(detector.position, radius);
+    }
+
+    public void Triggerjumpbutton()
+    {
+        StartCoroutine(Triggerjumpbuttoncorrutina());
+    }
+
+    IEnumerator Triggerjumpbuttoncorrutina()
+    {
+        jumpbutton = true;
+        yield return new WaitForEndOfFrame();
+        jumpbutton = false;
     }
 }
