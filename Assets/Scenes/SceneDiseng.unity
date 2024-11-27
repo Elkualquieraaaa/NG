@@ -9600,6 +9600,10 @@ PrefabInstance:
       propertyPath: scorecontroller
       value: 
       objectReference: {fileID: 2042830332}
+    - target: {fileID: 6482272991380332120, guid: fd08ece4b2ce83349b526b94ae059fb5, type: 3}
+      propertyPath: HealthController
+      value: 
+      objectReference: {fileID: 895031569}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11248,6 +11252,10 @@ PrefabInstance:
       propertyPath: joy
       value: 
       objectReference: {fileID: 424264487}
+    - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
+      propertyPath: forcem
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6788430172657079200, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.09

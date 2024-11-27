@@ -14999,6 +14999,10 @@ PrefabInstance:
       propertyPath: joy
       value: 
       objectReference: {fileID: 844757414}
+    - target: {fileID: 5763325454326460025, guid: a4b3976b16e721843bb604905c145a83, type: 3}
+      propertyPath: forcem
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6788430172657079200, guid: a4b3976b16e721843bb604905c145a83, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.91

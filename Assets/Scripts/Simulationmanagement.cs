@@ -12,6 +12,8 @@ public class Simulationmanagement : MonoBehaviour
 
     public Scorecontroller scorecontroller;
     public FruitCounter FruitCounter;
+    public HealthController HealthController;
+    public int actualscene;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +29,19 @@ public class Simulationmanagement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (HealthController.vida <= 0)
+        {
+            reload(actualscene);
+        }
+
         if (FruitCounter.currentfruit == 17)
         {
             SceneManager.LoadScene(1);
         }
     }
+
+    private void reload (int scene)
+        {
+        SceneManager.LoadScene(scene);
+        }
 }

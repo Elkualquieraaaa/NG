@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
     public delegate void Recibirdañodelegado(float health);
-    [SerializeField] float vida;
+    public float vida;
     public float vidamax;
 
     public Recibirdañodelegado Dañorecibido;
