@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 8495330408904501916}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00999999, y: -0.56, z: 0.0074128993}
+  m_LocalPosition: {x: 0.03, y: -0.533, z: 0.0074128993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5763325454326460025}
   - component: {fileID: 6130922482880076017}
   - component: {fileID: 7170736547971402317}
+  - component: {fileID: 300567261905542930}
   m_Layer: 6
   m_Name: MainCharacter
   m_TagString: Player
@@ -172,7 +173,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 9.8
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7bd11019a7ae1334a801c109455ee35e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -195,18 +196,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c051ffb8c522f2548b6b07b30f6d56e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   rigid: {fileID: 0}
-  fuerzaSalto: 0
-  horizontal: 0
-  centroDeteccion: {fileID: 6265781845573078811}
-  capasDeteccion:
+  detector: {fileID: 6265781845573078811}
+  LayerMask:
     serializedVersion: 2
     m_Bits: 8
-  "tama\xF1oDeteccion": {x: 0, y: 0}
-  tocandoPiso: 0
-  teclaSalto: 32
-  velocidad: 0
+  tocandoelsuelo: 0
+  radius: 0.55
+  forcej: 40
+  forcem: 10
+  keyjump: 32
+  horizontal: 0
 --- !u!95 &6130922482880076017
 Animator:
   serializedVersion: 5
@@ -242,3 +244,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 5
   vidamax: 5
+--- !u!210 &300567261905542930
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9033723704169046817}
+  m_Enabled: 1
+  m_SortingLayerID: 1771610231
+  m_SortingLayer: 6
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

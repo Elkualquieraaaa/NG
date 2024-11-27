@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8131729901011274440}
   - component: {fileID: 158512316861474686}
   - component: {fileID: 6504097597781157784}
+  - component: {fileID: 3734247840195083357}
   m_Layer: 0
   m_Name: Melon_0
   m_TagString: Untagged
@@ -156,3 +157,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5625
+--- !u!114 &3734247840195083357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2722324046239460969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e87b222dd49ee42aa3674a87d7889b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num: 1

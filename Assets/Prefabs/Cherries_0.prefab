@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6013463945615524689}
   - component: {fileID: 7915425600799335065}
   - component: {fileID: 5277468262988365013}
+  - component: {fileID: 3320078954506995674}
   m_Layer: 0
   m_Name: Cherries_0
   m_TagString: Untagged
@@ -156,3 +157,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4375
+--- !u!114 &3320078954506995674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578601277935021111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e87b222dd49ee42aa3674a87d7889b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num: 1

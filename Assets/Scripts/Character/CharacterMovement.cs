@@ -5,68 +5,68 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public Animator anim;
+    public SpriteRenderer SpriteRenderer;
+    public Animator animator;
     public Rigidbody2D rigid;
-    BaseEstado estadoActual;
-    public StateRun run;
-    public StateIdle idle;
-    public StateFall fall;
-    public StateJump jump;
-    
-    public float fuerzaSalto;
+    Basestate actualstate;
+
+    public Idlestate idle;
+    public Runstate run;
+    public Jumpstate jump;
+    public Fallstate fall;
+    public Transform detector;
+    public LayerMask LayerMask;
+    public bool tocandoelsuelo;
+    public float radius;
+    public float forcej;
+    public float forcem;
+    public KeyCode keyjump;
+
     public float horizontal;
-    [SerializeField] Transform centroDeteccion;
-    [SerializeField] LayerMask capasDeteccion;
-    [SerializeField] Vector2 tamañoDeteccion;
-    public bool tocandoPiso;
-    public KeyCode teclaSalto;
-
-    public float velocidad;
-
-  
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
-        run = new StateRun(this);
-        idle = new StateIdle(this);
-        fall = new StateFall(this);
-        jump = new StateJump(this);
-        
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+        idle = new Idlestate(this);
+        run = new Runstate(this);
+        jump = new Jumpstate(this);
+        fall = new Fallstate(this);
 
-        CambiarEstado(idle);
+        Changestate(idle);
     }
 
 
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
-
-        estadoActual.UpdateEstado();
-        Flip();
+        actualstate.Updatestatus();
+        flip();
     }
+
     private void FixedUpdate()
     {
-        estadoActual.FixedUpdateEstado();
-
-        tocandoPiso = Physics2D.OverlapBox(centroDeteccion.position, tamañoDeteccion, 0, capasDeteccion);
+        tocandoelsuelo = Physics2D.OverlapCircle(detector.position, radius, LayerMask);
+        actualstate.Fixedupdatestatus();
     }
 
-    public void CambiarEstado(BaseEstado nuevoEstado)
+    public void Changestate(Basestate newstate)
     {
-        estadoActual = nuevoEstado;
-        estadoActual.EntradaEstado();
+        actualstate = newstate;
+        actualstate.Entradastatus();
     }
+    private void flip()
+    {
+        if (horizontal > 0 && SpriteRenderer.flipX == true || horizontal < 0 && SpriteRenderer.flipX == false)
+        {
+            SpriteRenderer.flipX = !SpriteRenderer.flipX;
+        }
+    }
+
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(centroDeteccion.position, tamañoDeteccion);
-    }
-    public void Flip()
-    {
-        if (horizontal < 0 && transform.localEulerAngles.y == 0 || horizontal > 0 && transform.localEulerAngles.y == 180)
-        {
-            transform.localEulerAngles = new Vector3(transform.eulerAngles.x, horizontal > 0 ? 0 : 180, transform.eulerAngles.z);
-        }
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(detector.position, radius);
     }
 }
