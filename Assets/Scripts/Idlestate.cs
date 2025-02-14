@@ -19,7 +19,7 @@ public class Idlestate : Basestate
     {
         if (character.tocandoelsuelo)
         {
-            if (character.jumpbutton)
+            if (Input.GetKeyDown(character.keyjump))
             {
                 Exitstatus(character.jump);
             }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public Joystick joy;
+    //public Joystick joy;
     public SpriteRenderer SpriteRenderer;
     public Animator animator;
     public Rigidbody2D rigid;
@@ -42,7 +42,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        horizontal = joy.Horizontal;
+        horizontal = Input.GetAxis("Horizontal");
         actualstate.Updatestatus();
         flip();
     }
@@ -72,7 +72,7 @@ public class CharacterMovement : MonoBehaviour
         Gizmos.DrawWireSphere(detector.position, radius);
     }
 
-    public void Triggerjumpbutton()
+    /*public void Triggerjumpbutton()
     {
         StartCoroutine(Triggerjumpbuttoncorrutina());
     }
@@ -82,5 +82,5 @@ public class CharacterMovement : MonoBehaviour
         jumpbutton = true;
         yield return new WaitForEndOfFrame();
         jumpbutton = false;
-    }
+    }*/
 }
